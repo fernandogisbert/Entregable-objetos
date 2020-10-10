@@ -38,7 +38,7 @@ function todosLlenos() {
 
         if( (element.tittle && element.autor && element.year && element.gender) == '' ){
 
-            console.log('Debes rellenar todos los campos');
+            alert('Debes rellenar todos los campos');
         } 
     });
 }
