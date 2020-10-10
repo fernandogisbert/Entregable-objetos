@@ -33,21 +33,17 @@ var library = [ libro1, libro2, libro3 ];
 
 // VALIDACIONES //
 
-// no puede haber campos vacíos
+function todosLlenos() {
+    library.forEach(element => {
 
-function alertAll () {
-    alert('Debes rellenar todos los campos');
+        if( (element.tittle && element.autor && element.year && element.gender) == '' ){
+
+            console.log('Debes rellenar todos los campos');
+        } 
+    });
 }
 
-
-if((libro1.tittle && libro1.autor && libro1.year && libro1.gender) == ""){
-    alertAll();
-}else if((libro2.tittle && libro2.autor && libro2.year && libro2.gender) == ""){
-    alertAll();
-}else if((libro3.tittle && libro3.autor && libro3.year && libro3.gender) == ""){
-    alertAll();
-};
-
+todosLlenos();
 
 
 // El año debe tener 4 cifras
@@ -85,8 +81,6 @@ function generosValidate () {
 };
 
 generosValidate();
-
-
 
 
 ///////////////////////////////////////// FUNCIONES ////////////////////////////////////////////////////////////
